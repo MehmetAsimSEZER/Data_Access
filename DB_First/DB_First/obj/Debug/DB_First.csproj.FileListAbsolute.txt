@@ -1,0 +1,16 @@
+C:\Users\Sefer\source\repos\DB_First\DB_First\bin\Debug\DB_First.exe.config
+C:\Users\Sefer\source\repos\DB_First\DB_First\bin\Debug\DB_First.exe
+C:\Users\Sefer\source\repos\DB_First\DB_First\bin\Debug\DB_First.pdb
+C:\Users\Sefer\source\repos\DB_First\DB_First\bin\Debug\EntityFramework.dll
+C:\Users\Sefer\source\repos\DB_First\DB_First\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sefer\source\repos\DB_First\DB_First\bin\Debug\EntityFramework.xml
+C:\Users\Sefer\source\repos\DB_First\DB_First\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sefer\source\repos\DB_First\DB_First\obj\Debug\DB_First.csproj.AssemblyReference.cache
+C:\Users\Sefer\source\repos\DB_First\DB_First\obj\Debug\DB_First.csproj.SuggestedBindingRedirects.cache
+C:\Users\Sefer\source\repos\DB_First\DB_First\obj\Debug\DB_First.Form1.resources
+C:\Users\Sefer\source\repos\DB_First\DB_First\obj\Debug\DB_First.Properties.Resources.resources
+C:\Users\Sefer\source\repos\DB_First\DB_First\obj\Debug\DB_First.csproj.GenerateResource.cache
+C:\Users\Sefer\source\repos\DB_First\DB_First\obj\Debug\DB_First.csproj.CoreCompileInputs.cache
+C:\Users\Sefer\source\repos\DB_First\DB_First\obj\Debug\DB_First.csproj.CopyComplete
+C:\Users\Sefer\source\repos\DB_First\DB_First\obj\Debug\DB_First.exe
+C:\Users\Sefer\source\repos\DB_First\DB_First\obj\Debug\DB_First.pdb

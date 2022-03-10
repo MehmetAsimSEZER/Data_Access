@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DB_SchoolModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="ExamNote">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="StudentID" Type="Int32" />
+    <Property Name="LessonID" Type="Int32" />
+    <Property Name="Exam1" Type="Int16" />
+    <Property Name="Exam2" Type="Int16" />
+    <Property Name="Exam3" Type="Int16" />
+    <Property Name="Average" Type="Decimal" Precision="5" Scale="2" />
+    <Property Name="Status" Type="Boolean" />
+    <NavigationProperty Name="Lesson" Relationship="Self.FK_ExamNotes_Lesson" FromRole="ExamNotes" ToRole="Lesson" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_ExamNotes_Student" FromRole="ExamNotes" ToRole="Student" />
+  </EntityType>
+  <EntityType Name="Lesson">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LessonName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="ExamNotes" Relationship="Self.FK_ExamNotes_Lesson" FromRole="Lesson" ToRole="ExamNotes" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FirstName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="ExamNotes" Relationship="Self.FK_ExamNotes_Student" FromRole="Student" ToRole="ExamNotes" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_ExamNotes_Lesson">
+    <End Role="Lesson" Type="Self.Lesson" Multiplicity="0..1" />
+    <End Role="ExamNotes" Type="Self.ExamNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lesson">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ExamNotes">
+        <PropertyRef Name="LessonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExamNotes_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="0..1" />
+    <End Role="ExamNotes" Type="Self.ExamNote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="ExamNotes">
+        <PropertyRef Name="StudentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DB_SchoolEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="ExamNotes" EntityType="Self.ExamNote" />
+    <EntitySet Name="Lessons" EntityType="Self.Lesson" />
+    <EntitySet Name="Students" EntityType="Self.Student" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_ExamNotes_Lesson" Association="Self.FK_ExamNotes_Lesson">
+      <End Role="Lesson" EntitySet="Lessons" />
+      <End Role="ExamNotes" EntitySet="ExamNotes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExamNotes_Student" Association="Self.FK_ExamNotes_Student">
+      <End Role="Student" EntitySet="Students" />
+      <End Role="ExamNotes" EntitySet="ExamNotes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
