@@ -1,0 +1,12 @@
+C:\Users\Sefer\source\repos\CodeFirstExample\CodeFirstExample\bin\Debug\CodeFirstExample.dll.config
+C:\Users\Sefer\source\repos\CodeFirstExample\CodeFirstExample\bin\Debug\CodeFirstExample.dll
+C:\Users\Sefer\source\repos\CodeFirstExample\CodeFirstExample\bin\Debug\CodeFirstExample.pdb
+C:\Users\Sefer\source\repos\CodeFirstExample\CodeFirstExample\bin\Debug\EntityFramework.dll
+C:\Users\Sefer\source\repos\CodeFirstExample\CodeFirstExample\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sefer\source\repos\CodeFirstExample\CodeFirstExample\bin\Debug\EntityFramework.xml
+C:\Users\Sefer\source\repos\CodeFirstExample\CodeFirstExample\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sefer\source\repos\CodeFirstExample\CodeFirstExample\obj\Debug\CodeFirstExample.csproj.AssemblyReference.cache
+C:\Users\Sefer\source\repos\CodeFirstExample\CodeFirstExample\obj\Debug\CodeFirstExample.csproj.CoreCompileInputs.cache
+C:\Users\Sefer\source\repos\CodeFirstExample\CodeFirstExample\obj\Debug\CodeFirstExample.csproj.CopyComplete
+C:\Users\Sefer\source\repos\CodeFirstExample\CodeFirstExample\obj\Debug\CodeFirstExample.dll
+C:\Users\Sefer\source\repos\CodeFirstExample\CodeFirstExample\obj\Debug\CodeFirstExample.pdb
